@@ -1,0 +1,56 @@
+<% if friend.user == current_user %>
+
+<tr id="<%= dom_id friend %>">
+  <td>
+   
+    <%= friend.first_name %>
+
+  </td>
+
+  <td>
+    
+    <%= friend.last_name %>
+  </td>
+
+  <td>
+    
+    <%= friend.email %>
+  </td>
+
+  <td>
+    
+    <%= friend.phone %>
+  </td>
+
+  <td>
+
+    <%= friend.twitter %>
+  </td>
+
+   <td>
+
+    <%= friend.user_id %>
+  </td>
+
+
+  <td>
+   
+      <%= link_to "Show this friend", friend %>
+
+  </td>
+
+
+ 
+  <td>
+
+     <%= link_to "Edit this friend", edit_friend_path(friend), class:"btn btn-secondary" %>
+
+  </td>
+  <td>
+
+      <%= button_to "Destroy this friend", @friend, method: :delete %>
+
+  </td>
+
+<% end %>
+</tr>
